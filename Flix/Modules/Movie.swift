@@ -10,10 +10,13 @@ import Foundation
 
 class Movie {
     var title: String
-    var posterUrl: URL?
+    var posterUrl: String
+    var overview: String
     
     init(dictionary: [String: Any]) {
         title = dictionary["title"] as? String ?? "No title"
+        overview = dictionary["overview"] as? String ?? "No Overview"
+        posterUrl = dictionary["poster_path"] as? String ?? "No Poster Path"
         
         // Set the rest of the properties
     }
