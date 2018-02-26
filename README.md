@@ -132,6 +132,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 - I had a little trouble with the auto layout
+- The dynamic reszing of the cells was hard to understand. 
 
 ## License
 
