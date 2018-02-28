@@ -37,31 +37,12 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func fetchMovies(){
-        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData,timeoutInterval: 10)
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request){(data, response, error) in
-            if let error = error{
-                print(error.localizedDescription)
-            }else if let data = data {
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                let movieDictionaries = dataDictionary["results"] as! [[String: Any]]
-                
-                self.movies = []
-                for dictionary in movieDictionaries {
-                    let movie = Movie(dictionary: dictionary)
-                    self.movies.append(movie)
-                }
-                
+        MovieApiManager().nowPlayingMovies { (movies: [Movie]?, error: Error?) in
+            if let movies = movies {
+                self.movies = movies
                 self.tableView.reloadData()
-                self.refreshControl.endRefreshing()
-                
-                sleep(2)
-                
-                self.activityIndicator.stopAnimating()
             }
         }
-        task.resume()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,18 +52,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
-        let movie = movies[indexPath.row]
-        let title = movie.title
-        let overview = movie.overview
-        cell.titleLabel.text = title
-        cell.overviewLabel.text = overview
-        
-        let posterPathString = movie.posterUrl as! String
-        let baseURLString = "https://image.tmdb.org/t/p/w500"
-        
-        let posterURL = URL(string: baseURLString + posterPathString)!
-        cell.posterImageView.af_setImage(withURL: posterURL)
-        
+        cell.movie = movies[indexPath.row]
+
         return cell
     }
     

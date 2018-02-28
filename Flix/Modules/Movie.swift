@@ -22,7 +22,7 @@ class Movie {
     }
     
     //Functions
-    func movies(dictionaries: [[String: Any]]) -> [Movie] {
+    class func movies(dictionaries: [[String: Any]]) -> [Movie] {
         var movies: [Movie] = []
         for dictionary in dictionaries {
             let movie = Movie(dictionary: dictionary)
@@ -31,7 +31,7 @@ class Movie {
         
         return movies
     }
-}
 
+}
 
 
