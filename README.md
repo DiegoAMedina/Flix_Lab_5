@@ -2,18 +2,18 @@
 
 **Flix** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **8** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
 The following **required** user stories are complete:
 
-- [X] User sees app icon in home screen and styled launch screen (+1pt)
-- [X] User can scroll through a list of movies currently playing in theaters from The Movie DB API (+5pt)
-- [X] User can "Pull to refresh" the movie list (+2pt)
-- [X] User sees a loading state while waiting for the movies to load (+2pt)
+- [x] User sees app icon in home screen and styled launch screen (+1pt)
+- [x] User can scroll through a list of movies currently playing in theaters from The Movie DB API (+5pt)
+- [x] User can "Pull to refresh" the movie list (+2pt)
+- [x] User sees a loading state while waiting for the movies to load (+2pt)
 
-The following **stretch** user stories are implemented:
+The following **optional** user stories are implemented:
 
 - [ ] User sees an alert when there's a networking error (+1pt)
 - [ ] User can search for a movie (+3pt)
@@ -28,40 +28,55 @@ The following **additional** user stories are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. How to better implement the cell boxes to make it easier for me
-2. I would like to know more about where else I could've placed the comands to start and end the activity indicator
+1. Being able to search for a movie.
+2. Image placeholders
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/n6XydS6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/9KY9s44.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-- I struggled a little trying to figure out where to place the activity indicator and how to make it visible for longer
 
------------------------
+## License
 
-# Project 2 - *FLix - part 2 *
+Copyright 2018 Diego Medina
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+# Project 2 - *Flix*
 
 **Flix** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **5** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [X] User can tap a cell to see a detail view (+5pts)
-- [X] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView (+5pts)
+- [x] User can tap a cell to see a detail view (+5pts)
+- [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView (+5pts)
 
 The following **stretch** features are implemented:
 
-- [X] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
+- [x] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
 - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer (+3pts)
 - [ ] Customize the navigation bar (+1pt)
 - [ ] List in any optionals you didn't finish from last week (+1-3pts)
@@ -74,65 +89,95 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. I would like to further discuss about how the cells can resize themselves
-2. I would also discuss about how the views connect to each other
+1. How the tab bar button can be created with code.
+2. Is it best to be able to create view controllers with the builder or with code?
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/olaAbSp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/zJFl3SD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-- I had a little trouble trying to get the views to connect to another
 
-----------
+## License
 
-# Lab 3 - *Flix - part 3*
+    Copyright 2018 Diego Medina
 
-**Flix** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-Time spent: **3** hours spent in total
+        http://www.apache.org/licenses/LICENSE-2.0
 
-## User Stories
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    
+--------------------------------------------------------------------------------------------------
+    
+ # Lab 3 - *Flix*
 
-The following **required** user stories are complete:
+ **Flix** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-- The following screens use AutoLayout to adapt to various orientations and screen sizes
-   - [X] Movie feed view (+3pt)
-   - [X] Detail view (+2pt)
+ Time spent: **4** hours spent in total
 
-The following **stretch** user stories are implemented:
+ ## User Stories
 
-- [ ] Dynamic Height Cells (+1)
-- [ ] Collection View AutoLayout (+2)
+ The following **required** user stories are complete:
 
-The following **additional** user stories are implemented:
+ - The following screens use AutoLayout to adapt to various orientations and screen sizes
+ - [x] Movie feed view (+3pt)
+ - [x] Detail view (+2pt)
 
-- [ ] List anything else that you can get done to improve the app functionality! (+1-3pts)
+ The following **stretch** user stories are implemented:
 
-Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
+ - [ ] Dynamic Height Cells (+1)
+ - [ ] Collection View AutoLayout (+2)
 
-1. Dynamic cell height
-2. Better faster way to do the auto layout
+ The following **additional** user stories are implemented:
 
-## Video Walkthrough
+ - [ ] List anything else that you can get done to improve the app functionality! (+1-3pts)
 
-Here's a walkthrough of implemented user stories:
+ Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-<img src='https://i.imgur.com/tN4L0k0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+ 1. Autolayout
+ 2. Constraints
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+ ## Video Walkthrough
 
-## Notes
+ Here's a walkthrough of implemented user stories:
 
-Describe any challenges encountered while building the app.
-- I had a little trouble with the auto layout
-- The dynamic reszing of the cells was hard to understand.
+ <img src='https://i.imgur.com/BFPIUXH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+ GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+ ## Notes
+
+ Describe any challenges encountered while building the app.
+
+ ## License
+
+ Copyright 2018 Diego Medina
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
 
 ----------------
 
@@ -153,7 +198,7 @@ The following **required** user stories are complete:
 
 The following **additional** user stories are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality! (+1-3pts)
+List anything else that you can get done to improve the app functionality! (+1-3pts)
 - [X] Popular Movies Function and view controller
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
@@ -176,7 +221,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2018] [Sandra Flores]
+    Copyright 2018 Diego Medina
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
