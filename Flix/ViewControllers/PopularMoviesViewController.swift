@@ -9,8 +9,8 @@
 import UIKit
 import AlamofireImage
 
-class NowPlayingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class PopularMoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -37,7 +37,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func fetchMovies(){
-        MovieApiManager().nowPlayingMovies { (movies: [Movie]?, error: Error?) in
+        MovieApiManager().popularMovies { (movies: [Movie]?, error: Error?) in
             if let movies = movies {
                 self.movies = movies
                 self.tableView.reloadData()
@@ -53,7 +53,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
         cell.movie = movies[indexPath.row]
-
+        
         return cell
     }
     
@@ -68,12 +68,13 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-       
+        
     }
     
-
-
+    
+    
 }
+
